@@ -12,7 +12,7 @@ MAUD MCP Server
 用法：
   python maud_mcp_server.py
 
-作者：新哥 & 小龙虾 🦞
+作者：FullPatt
 """
 
 import os

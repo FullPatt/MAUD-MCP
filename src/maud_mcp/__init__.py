@@ -17,4 +17,4 @@ maud_mcp — MAUD AI Agent 工具包
 """
 
 __version__ = "0.1.0"
-__author__ = "小龙虾 🦞"
+__author__ = "FullPatt"

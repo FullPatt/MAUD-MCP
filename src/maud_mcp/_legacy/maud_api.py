@@ -10,7 +10,7 @@ MAUD Java 内核 Python 包装层
   - 已编译的 MAUD.jar
   - JDK 21+
 
-作者：新哥 & 小龙虾 🦞
+作者：FullPatt
 """
 
 import subprocess

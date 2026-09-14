@@ -14,6 +14,16 @@ import os
 import json
 import logging
 
+# Windows 控制台默认代码页为 GBK，直接打印 ✅/❌ 等符号会抛
+# UnicodeEncodeError 并中断进程（打包成 exe 后尤其明显）。
+# 这里统一把标准输出/错误切到 UTF-8，并对无法编码的字符降级替换。
+for _stream in (sys.stdout, sys.stderr):
+    if _stream is not None and hasattr(_stream, "reconfigure"):
+        try:
+            _stream.reconfigure(encoding="utf-8", errors="replace")
+        except Exception:
+            pass
+
 # 确保包路径
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
